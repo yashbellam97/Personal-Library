@@ -28,13 +28,15 @@ class BookForm extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         const newBook = {
-            bookId: Math.random() * 1000,
+            bookId: Math.floor(Math.random() * 1000),
             bookName: this.state.newBookName,
             author: this.state.newBookAuthor,
             haveRead: this.state.newBookRead
         }
-        const updatedArray = this.props.books.push(newBook);
-        this.props.updateState(updatedArray);
+        let bookArray = this.props.books;
+        bookArray.push(newBook);
+
+        this.props.updateState(bookArray);
         this.resetForm();
     }
 

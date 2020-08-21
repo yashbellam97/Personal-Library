@@ -10,16 +10,32 @@ class BooksPage extends React.Component {
             books: booksData
         }
         this.updateState = this.updateState.bind(this);
+        this.flipRead = this.flipRead.bind(this);
+
     }
 
     updateState(newState) {
+        console.log(newState);
         this.setState({books: newState});
+    }
+
+    flipRead(id) {
+        console.log(id);
+        this.setState((prevState) => {
+            const updatedArray = prevState.books.map((book) => {
+                if (book.bookId === id) {
+                    book.haveRead = !book.haveRead;
+                };
+                return book;
+            });
+            return updatedArray;
+        })
     }
 
     render() {
         return (
             <div>
-                <BookList books={booksData}/>
+                <BookList books={booksData} flipRead={this.flipRead}/>
                 <BookForm books={booksData} updateState={this.updateState}/>
             </div>
         );
