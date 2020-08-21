@@ -44,7 +44,8 @@ class BookForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <div className="formContainer">
+                <form className="bookForm" onSubmit={this.handleSubmit}>
                 <input
                     type = "text"
                     name = "newBookName"
@@ -73,6 +74,7 @@ class BookForm extends React.Component {
                 />
                 <button>Add book</button>
             </form>
+            </div>
         );
     }
 }

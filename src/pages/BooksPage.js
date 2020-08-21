@@ -35,8 +35,8 @@ class BooksPage extends React.Component {
     render() {
         return (
             <div>
-                <BookList books={booksData} flipRead={this.flipRead}/>
                 <BookForm books={booksData} updateState={this.updateState}/>
+                <BookList books={booksData} flipRead={this.flipRead}/>
             </div>
         );
     }
