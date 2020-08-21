@@ -9,6 +9,16 @@
     padding: 0;
 }
 
+.container {
+    background-color: #3E92CC;
+    background-image:
+        radial-gradient(
+        circle at bottom right,
+        #DBD8AE,
+        white
+    );
+}
+
 .header {
     margin: 0;
     background-color: #202020;
