@@ -20,7 +20,6 @@ class BooksPage extends React.Component {
     }
 
     flipRead(id) {
-        console.log(id);
         this.setState((prevState) => {
             const updatedArray = prevState.books.map((book) => {
                 if (book.bookId === id) {

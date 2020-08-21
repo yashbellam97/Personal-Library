@@ -81,9 +81,10 @@
 }
 
 .bookName {
+    display: inline-block;
     font-size: 40px;
     font-family: 'Noto Sans JP', sans-serif;
-    width: inherit;
+    width: 400px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
