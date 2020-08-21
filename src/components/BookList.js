@@ -8,7 +8,9 @@ function BookList(props) {
         <div>
             <h1 className="booksHeading">Your Books</h1>
             <hr style={{width: "800px", marginLeft: "30px", marginBottom: "50px"}}/>
-            {bookList}
+            <div className="bookList">
+                {bookList}
+            </div>
         </div>
     );
 }
