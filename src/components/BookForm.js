@@ -1,4 +1,7 @@
 import React from "react";
+import TextField from '@material-ui/core/TextField';
+import Checkbox from '@material-ui/core/Checkbox';
+import Box from '@material-ui/core/Box';
 
 class BookForm extends React.Component {
 
@@ -46,33 +49,39 @@ class BookForm extends React.Component {
         return (
             <div className="formContainer">
                 <form className="bookForm" onSubmit={this.handleSubmit}>
-                <input
-                    type = "text"
-                    name = "newBookName"
-                    value = {this.state.newBookName}
-                    onChange = {this.handleChange}
-                    placeholder = "Book Name"
-                    required
-                />
-                <input
-                    type = "text"
-                    name = "newBookAuthor"
-                    value = {this.state.newBookAuthor}
-                    onChange = {this.handleChange}
-                    placeholder = "Author"
-                    required
-                />
-                <label>
-                    Finsished Reading?
-                </label>
-                <input
-                    type = "checkbox"
+                <Box style={{display: "inline"}} m={1}>
+                    <TextField
+                        required
+                        name = "newBookName"
+                        value = {this.state.newBookName}
+                        onChange = {this.handleChange}
+                        label = "Book Name"
+                        variant="outlined"
+                    />
+                </Box>
+                <Box style={{display: "inline"}} m={1}>
+                    <TextField
+                        required
+                        id="standard-required"
+                        name = "newBookAuthor"
+                        value = {this.state.newBookAuthor}
+                        onChange = {this.handleChange}
+                        label = "Author"
+                        variant="outlined"
+                    />
+                </Box>
+                <Checkbox
                     name = "newBookRead"
+                    color= "default"
                     checked = {this.state.newBookRead}
                     onChange = {this.handleChange}
                     placeholder = ""
                 />
-                <button>Add book</button>
+                <label>
+                    Finsished Reading
+                </label>
+                <button className="addBookButton">Add new book</button>
+                <hr style={{marginTop: "20px"}} />
             </form>
             </div>
         );

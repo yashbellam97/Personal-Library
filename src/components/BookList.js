@@ -7,7 +7,6 @@ function BookList(props) {
     return (
         <div className="bookDetails">
             <h1 className="booksHeading">Your Books</h1>
-            <hr style={{width: "800px", marginLeft: "30px", marginBottom: "50px"}}/>
             <div className="bookList">
                 {bookList}
             </div>

@@ -46,21 +46,33 @@ export default BooksPage;
 
 let booksData = [
     {
-        bookId: 1,
+        bookId: Math.floor(Math.random() * 1000),
         bookName: "The Book Thief",
         author: "Markus Zusak",
+        haveRead: false
+    },
+    {
+        bookId: Math.floor(Math.random() * 1000),
+        bookName: "1984",
+        author: "George Orwell",
         haveRead: true
     },
     {
-        bookId: 2,
+        bookId: Math.floor(Math.random() * 1000),
         bookName: "The Hobbit",
         author: "J.R.R. Tolkien",
         haveRead: false
     },
     {
-        bookId: 3,
-        bookName: "1984",
-        author: "George Orwell",
-        haveRead: false
+        bookId: Math.floor(Math.random() * 1000),
+        bookName: "Pride and Prejudice",
+        author: "Jane Austen",
+        haveRead: true
+    },
+    {
+        bookId: Math.floor(Math.random() * 1000),
+        bookName: "The Kite Runner",
+        author: "Khaled Hosseini",
+        haveRead: true
     }
 ]

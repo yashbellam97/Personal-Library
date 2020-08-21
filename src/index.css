@@ -10,12 +10,13 @@
 }
 
 .container {
+    font-family: 'Alata', sans-serif;
     min-height: 100vh;
     min-width: 1000px;
-    background-color: #3E92CC;
+    background-color: #DBD8AE;
     background-image:
-        radial-gradient(
-        circle at bottom right,
+        linear-gradient(
+        to top,
         #DBD8AE,
         white
     );
@@ -38,7 +39,7 @@
 
 .booksHeading {
     margin: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-family: 'Alata', sans-serif;
     font-style: italic;
     font-size: 50px;
@@ -48,16 +49,22 @@
 .bookList {
     display: grid;
     width: fit-content;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     gap: 5px;
+}
+
+@media only screen and (max-width: 1900px) {
+    .bookList {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
     .bookList {
         grid-template-columns: 1fr;
     }
-  }
+}
 
 .book {
     margin: 30px;
@@ -100,16 +107,34 @@
     margin-left: 2px;
 }
 
+.readStatus {
+    float: right;
+    /* font-size: 15px; */
+    margin-right: 20px;
+}
+
 .formContainer {
     display: block;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .bookForm {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
-    /* text-align: center; */
-    border: solid thin;
+    padding: 10px;
+    /* border: solid thin; */
+}
+
+.addBookButton {
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    background-color: brown;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 5px;
+    margin: 5px 0 0 30px;
 }
