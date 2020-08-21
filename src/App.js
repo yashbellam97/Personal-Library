@@ -1,11 +1,11 @@
 import React from "react";
 
-import BookList from "./components/BookList";
+import BooksPage from "./pages/BooksPage";
 
 function App() {
     return (
         <div>
-            <BookList />
+            <BooksPage />
         </div>
     );
 }
