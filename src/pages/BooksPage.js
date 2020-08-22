@@ -11,7 +11,7 @@ class BooksPage extends React.Component {
         }
         this.updateState = this.updateState.bind(this);
         this.flipRead = this.flipRead.bind(this);
-
+        this.deleteBook = this.deleteBook.bind(this);
     }
 
     updateState(newState) {
@@ -27,15 +27,20 @@ class BooksPage extends React.Component {
                 };
                 return book;
             });
-            return updatedArray;
+            return {books: updatedArray};
         })
+    }
+
+    deleteBook(id) {
+        const updatedArray = this.state.books.filter((book) => book.bookId !== id);
+        this.setState({books: updatedArray});
     }
 
     render() {
         return (
             <div>
-                <BookForm books={booksData} updateState={this.updateState}/>
-                <BookList books={booksData} flipRead={this.flipRead}/>
+                <BookForm books={this.state.books} updateState={this.updateState}/>
+                <BookList books={this.state.books} flipRead={this.flipRead} deleteBook={this.deleteBook}/>
             </div>
         );
     }

@@ -7,7 +7,10 @@ function Book(props) {
     return (
         <div className={`book${props.details.haveRead ? " completed" : ""}`}>
             <h3 className="bookName">{props.details.bookName}</h3>
-            <IconButton style={{ float: "right" }}>
+            <IconButton
+                style={{ float: "right" }}
+                onClick={() => props.deleteBook(props.details.bookId)}
+            >
                 <DeleteIcon style = {{ fontSize: 40, color: "#000"}} />
             </IconButton>
             <br />

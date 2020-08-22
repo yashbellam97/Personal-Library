@@ -43,8 +43,6 @@ class BookForm extends React.Component {
         this.resetForm();
     }
 
-    
-
     render() {
         return (
             <div className="formContainer">
@@ -75,7 +73,6 @@ class BookForm extends React.Component {
                     color= "default"
                     checked = {this.state.newBookRead}
                     onChange = {this.handleChange}
-                    placeholder = ""
                 />
                 <label>
                     Finsished Reading
