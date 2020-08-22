@@ -75,7 +75,7 @@ class BookForm extends React.Component {
                     onChange = {this.handleChange}
                 />
                 <label>
-                    Finsished Reading
+                    Finished Reading
                 </label>
                 <button className="addBookButton">Add new book</button>
                 <hr style={{marginTop: "20px"}} />
